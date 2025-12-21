@@ -120,7 +120,6 @@ func (p *Player) Close() {
 
 // Play 主下载逻辑 - 大视频优化+内存管理版
 func (p *Player) Play(w http.ResponseWriter, ctx context.Context) error {
-    // 移除开头的 defer p.Close()，改为只在错误时清理
     var cleanupDone bool
     defer func() {
         if !cleanupDone {
@@ -580,7 +579,7 @@ func (p *Player) cleanupResources() {
     }
 }
 
-// downloadFirst 下载第一个分片获取文件信息 - 大视频优化版（保持不变）
+// downloadFirst 下载第一个分片获取文件信息 - 大视频优化版
 func (p *Player) downloadFirst(w http.ResponseWriter, ctx context.Context) (int64, int64, error) {
     start, end := p.start, p.end
     
@@ -623,7 +622,7 @@ func (p *Player) downloadFirst(w http.ResponseWriter, ctx context.Context) (int6
         return 0, 0, fmt.Errorf("转换文件总大小失败 %w", err)
     }
 
-    // 关键修复：确保 end 不超过文件大小
+    // 关键：确保 end 不超过文件大小
     if p.end <= 0 {
         end = totalLength - 1
     } else {
@@ -686,7 +685,7 @@ func (p *Player) downloadFirst(w http.ResponseWriter, ctx context.Context) (int6
     return start + int64(len(chunk)), end, nil
 }
 
-// downloadChunk2 底层分片下载方法 - 大视频优化（保持不变）
+// downloadChunk2 底层分片下载方法 - 大视频优化
 func (p *Player) downloadChunk2(ctx context.Context, start, end int64) ([]byte, http.Header, int, error) {
     req, err := http.NewRequest("GET", p.url, nil)
     if err != nil {
