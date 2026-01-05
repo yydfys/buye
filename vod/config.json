@@ -20,12 +20,197 @@
     "star2": "https://1.star2.cn"
   },
   "vods": [
-    { "key": "wogg", "name": "玩偶", "url": "https://www.wogg.one" },
+    {
+      "key": "wogg",
+      "name": "玩偶",
+      "url": "https://www.wogg.one",
+      "filters": {
+        "1": [
+          {
+            "key": "class",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部剧情",
+                "v": ""
+              },
+              {
+                "n": "喜剧",
+                "v": "喜剧"
+              }
+            ]
+          },
+          {
+            "key": "area",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部地区",
+                "v": ""
+              },
+              {
+                "n": "中国大陆",
+                "v": "中国大陆"
+              }
+            ]
+          },
+          {
+            "key": "year",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部时间",
+                "v": ""
+              },
+              {
+                "n": "2025",
+                "v": "2025"
+              }
+            ]
+          },
+          {
+            "key": "letter",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部字母",
+                "v": ""
+              },
+              {
+                "n": "A",
+                "v": "A"
+              }
+            ]
+          },
+          {
+            "key": "sort",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "默认排序",
+                "v": ""
+              },
+              {
+                "n": "人气",
+                "v": "hits"
+              },
+              {
+                "n": "评分",
+                "v": "score"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "key": "mogg",
       "name": "木偶",
-      "url": "https://tv.91muou.icu",
-      "proxy": false
+      "url": "https://666.666291.xyz",
+      "proxy": false,
+      "filters": {
+        "1": [
+          {
+            "key": "class",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部剧情",
+                "v": ""
+              },
+              {
+                "n": "喜剧",
+                "v": "喜剧"
+              }
+            ]
+          },
+          {
+            "key": "area",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部地区",
+                "v": ""
+              },
+              {
+                "n": "大陆",
+                "v": "大陆"
+              }
+            ]
+          },
+          {
+            "key": "lang",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部语言",
+                "v": ""
+              },
+              {
+                "n": "国语",
+                "v": "国语"
+              }
+            ]
+          },
+          {
+            "key": "year",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部时间",
+                "v": ""
+              },
+              {
+                "n": "2025",
+                "v": "2025"
+              }
+            ]
+          },
+          {
+            "key": "letter",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "全部字母",
+                "v": ""
+              },
+              {
+                "n": "Z",
+                "v": "Z"
+              }
+            ]
+          },
+          {
+            "key": "sort",
+            "name": "",
+            "init": "",
+            "value": [
+              {
+                "n": "默认排序",
+                "v": ""
+              },
+              {
+                "n": "人气",
+                "v": "hits"
+              },
+              {
+                "n": "评分",
+                "v": "score"
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "tgclient": {
@@ -62,5 +247,12 @@
     "api": "csp_DanmakuSpider",
     "searchable": 1,
     "ext": "http://127.0.0.1:9321/938944"
-  }
+  },
+  "iptv": [
+    {
+      "key": "iptv",
+      "name": "这个只对安卓壳有效",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+    }
+  ]
 }
